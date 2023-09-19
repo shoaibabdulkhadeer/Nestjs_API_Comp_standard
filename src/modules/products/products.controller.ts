@@ -4,7 +4,9 @@ import { Controller, Get, Post, Body, Res, Patch, Param, Put, HttpStatus, NotFou
 import { ProductsService } from './products.service';
 import { CreateProductDto } from 'src/database/Dto/productsDto';
 import { ERROR_MESSAGES, SUCCESS_MESSAGES } from 'src/shared/appMessages.schema';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('products')
 @Controller('products')
 export class ProductsController {
     
